@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff9c4;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    /* увел-ил клетку в 2 раза */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.visiting-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 равные колонки */
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    /*карточка с инфой и фото*/
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+      /*  z-index: 10;*/
+
+}
+
+/* левая колонка - инф-ия */
+.info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: #666;
+    margin-bottom: 25px;
+    border-left: 4px solid #4CAF50;
+    padding-left: 15px;
+}
+
+.description {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.skills {
+    margin-bottom: 30px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 5px 12px;
+    margin: 5px 8px 5px 0;
+    border-radius: 15px;
+    font-size: 0.9em;
+    border: 1px solid #bbdefb;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 2px solid #4CAF50;
+   z-index: 150; /* увеличила с 10 до 150 */
+    position: relative;
+}
+
+.contact-btn:hover {
+    background: white;
+    color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* правая колонка - фото */
+.photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 505px;
+    height: 420px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+
+}
+
+.photo-caption {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+
+
+
+.full-width-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 190px;
+    /* высота подвала */
+    
+    overflow: hidden;
+    margin-top: 50px; /* отступ от осн-го контента */
+
+    z-index: 100; /*100*/
+}
+
+.footer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* растянуть фото на всю область */
+    display: block;
+    
+}
+
+/* декор эл-ты */
+.decoration {
+    position: absolute;
+    z-index: 99;
+    pointer-events: none; /* чтобы не мешали кликать */
+}
+.decoration img {
+    width: 100%;        /* зан-ет всю ширину конт-ра */
+    height: 100%;       /* зан-ет всю высоту конт-ра */
+    object-fit: contain; /* сохр-ет пропорции изобр-ия */
+    display: block;     /* убирает лишние отступы */
+}
+
+.moon { top: 70%; right: 20%; width: 85px; height: 85px; transform: rotate(-7deg); }
+
+
+
+
+.scotch { top: 8%; right: 18%; width: 215px; height: 215px; transform: rotate(0deg); }
+.shterhoode { top: 33%; right: 5%; width: 225px; height: 225px; transform: rotate(45deg); }
+.smile { top: 9%; right: 5%; width: 130px; height: 130px; transform: rotate(30deg); }
+.mess { top: -13%; left: -2%; width: 380px; height: 380px; transform: rotate(5deg); }
+.greenBlock { top: 62%; right: 2%; width: 145px; height: 145px; transform: rotate(90deg); }
+.paper {top: 59%; right: 79%; width: 305px; height: 305px; transform: rotate(90deg); }
+.heart { top: 40%; left: 10%; width: 120px; height: 120px; transform: rotate(-15deg); }
+.star { top: 6%; left: 35%; width: 105px; height: 105px; transform: rotate(-12deg); }
